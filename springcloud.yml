@@ -1,0 +1,21 @@
+#spring active env
+spring:
+    application:
+        name: efanganchang
+    profiles:
+        active: prod
+
+#server config
+server:
+    tomcat:
+        max-threads: 700
+        uri-encoding: UTF-8
+        accesslog:
+            enabled: true
+            directory: ./logs/${spring.application.name}
+            pattern: '%{yyyy-MM-dd HH:mm:ss.SSS}t [%{X-Trace-Id}o | %I] %a "%{X-Client-Name}i" %U %m  %s %D'
+    compression:
+        enabled: true
+        mime-types: application/json,application/javascript,application/xhtml+xml,text/html,text/xml,text/plain,text/css
+    error.whitelabel.enabled: true
+    port: 80  # Enable the default error page displayed in browsers in case of a server error.
