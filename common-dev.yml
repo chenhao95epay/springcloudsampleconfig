@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      default-zone: http://localhost:9001/eureka
+      default-zone: http://95epay:95epay@localhost:9001/eureka
   instance:
     #租期到期时间
     lease-expiration-duration-in-seconds: 60
